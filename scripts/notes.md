@@ -39,7 +39,7 @@ $snapshotFilter = @(
     @{n="Total";e={[MATH]::Round(($_.Total / 1024 / 1024),2)}}
 )
 
-$snapshots | Select-Object @snapshotFilter | Export-Csv -Path ./snapshots.csv
+$snapshots | Select-Object $snapshotFilter | Export-Csv -Path ./snapshots.csv
 ```
 
 
